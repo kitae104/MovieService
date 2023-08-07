@@ -9,8 +9,24 @@
   
   <script>
     const root = document.getElementById('root');
-    const h3 = React.createElement("h3", {onMouseEnter: ()=> console.log("Enter")}, 'Hello World');
-    const btn = React.createElement("button", {onClick: () => console.log('Im Click')}, 'Click Me');
+    const h3 = React.createElement(
+      "h3", 
+      {
+        onMouseEnter: ()=> console.log("Enter")
+      }, 
+      'Hello World'
+    );
+    const btn = React.createElement(
+      "button", 
+      {
+        onClick: () => console.log('Im Click'),
+        style: {
+          backgroundColor: 'tomato',
+          color: 'white'
+        }
+      }, 
+      'Click Me'
+    );
     const container = React.createElement("div", {id: 'my-div'}, [h3, btn]);
     ReactDOM.render(container, root);
   </script>
